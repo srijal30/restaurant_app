@@ -1,0 +1,53 @@
+{
+    "RestaurantName": "Bossman Halal Cart",
+    "Categories": [
+        {
+            "CategoryName": "Meals",
+            "CategoryIcon": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "MenuItems": [
+                {
+                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-8c4fd750-f4d8-481b-96df-c8eff1fbd5e7",
+                    "Name": "Chicken Over Rice",
+                    "Price": "8.99",
+                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+                    "Description": "Chicken server over rice with traditional white sauce."
+                },
+                {
+                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-010a2961-c724-4421-8b5b-5d6b6fa69ca7",
+                    "Name": "Lamb Over Rice",
+                    "Price": "8.99",
+                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+                    "Description": "Exactly like chicken over rice except served with lamb"
+                },
+                {
+                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-4fa57122-2f9e-4d6d-ab8a-d57ee8b3d7d0",
+                    "Name": "Chicken Gyro",
+                    "Price": "6.99",
+                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+                    "Description": "Chicken over rice except no rice and served insIde wrap. White sauce still included."
+                }
+            ]
+        },
+        {
+            "CategoryName": "SIdes",
+            "CategoryIcon": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "MenuItems": [
+                {
+                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-b6557855-d64b-4af3-9951-45792e5ae5a1",
+                    "Name": "Falafel",
+                    "Price": "4.0",
+                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+                    "Description": "Traditional MIddle Eastern dish."
+                },
+                {
+                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-482b86cb-97e6-488a-a001-553dd5112bd5",
+                    "Name": "Hot Dog",
+                    "Price": "2.0",
+                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+                    "Description": "Meat that comes from who knows where served on a bun with some ketchup."
+                }
+            ]
+        }
+    ],
+    "RestaurantId": "dbd236b8-76c6-4f02-bfae-2828b683b20e"
+}

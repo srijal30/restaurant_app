@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+
+<head>
+    <title>Restaurant App</title>
+    <style>
+        .order {
+            border-width:2px;
+            border-style:solid;
+            border-color:black;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Kitchen App</h1>
+    <p>Work in progress...</p>
+
+    <h3>Current Orders:</h3>
+    
+    {% for order in orders %}
+        <div class="order" id="{{ order['OrderId'] }}">
+            <br><br>
+            <b>OrderId: </b> {{ order["OrderId"] }} <br>
+            <b>RestaurantId: </b> {{ order["RestaurantId"] }} <br>
+            <b>Time: </b> {{ order["Time"] }} <br>
+            <b>TableId: </b> {{ order["TableId"] }} <br><br>
+
+            <b>Order Items:</b> <br><br>
+
+            {% for item in order["OrderItems"] %}
+
+                <b>ItemId: </b> {{ item["ItemId"] }} <br>
+                <b>Quantity: </b> {{ item["Quantity"] }} <br><br>
+
+            {% endfor %}
+            <button onclick="document.getElementById( '{{ order['OrderId'] }}' ).remove() ">Remove</button>
+            <br><br>
+        </div>
+        <br>
+    {% endfor %}
+
+</body>
+
+
+</html>
+

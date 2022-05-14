@@ -1,0 +1,26 @@
+{
+    "RestaurantName": "Julie's Smoothie Bar",
+    "Categories": [
+        {
+            "CategoryName": "Smoothies",
+            "CategoryIcon": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "MenuItems": [
+                {
+                    "Id": "e4d632a3-769d-4681-8f38-0626e2e25d52-732917b8-b343-456e-a9d9-e477af7eadfb",
+                    "Name": "Strawberry Smoothie",
+                    "Price": "3.99",
+                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+                    "Description": "Strawberries blended with ice cream."
+                },
+                {
+                    "Id": "e4d632a3-769d-4681-8f38-0626e2e25d52-a712f93c-1a05-4b9a-b5dd-e000e14ef8ad",
+                    "Name": "Banana Smoothie",
+                    "Price": "3.99",
+                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+                    "Description": "Bananas blended with ice cream"
+                }
+            ]
+        }
+    ],
+    "RestaurantId": "2ca70f30-6a58-4412-a935-3e772829d839"
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+
+<head>
+    <title>Restaurant App</title>
+
+    <style>
+        table, th, td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Restaurant</th>
+            <th>UUID</th>
+            <th>Link</th>
+        </tr>
+        {% for rest in arr if rest != "" %}
+        <tr>
+            <td>{{ rest.split(" | ")[0] }}</td>
+            <td>{{ rest.split(" | ")[1] }}</td>
+            <td>
+                <a href={{ "http://54.145.44.208:5000/menu/" + rest.split(" | ")[1] }}>Link</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+
+</html>
+

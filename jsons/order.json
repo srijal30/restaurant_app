@@ -1,0 +1,25 @@
+{
+    "OrderId": "...",
+    "RestaurantId": "...",
+    "TableId": "...",
+    "Time": "...",
+
+    "OrderItems": [
+
+        {
+            "ItemId":"...",
+            "Quantity":"..."
+        },
+
+        {
+            "ItemId":"...",
+            "Quantity":"..."
+        },
+
+        {
+            "ItemId":"...",
+            "Quantity":"..."
+        }
+
+    ]
+}
