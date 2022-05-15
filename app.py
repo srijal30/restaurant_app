@@ -16,18 +16,17 @@ app.secret_key = "what is a good secret" #maybe change in the future
 #add case where ID doesnt match
 @app.route("/menu/<id>")
 def get_menu(id):
-    return retrieveMenu(id)
+    return retreiveMenu(id)
 
 #post order
 #rn generates a new order everytime, in the future we should check if preexist order
 @app.route("/order", methods=["POST"])
 def post_order():
     orderInfo = json.loads(request.data)
-    print(orderInfo)
     #check if there is pre-exisiting order id
     if "OrderId" in orderInfo:
-        #update the order in db (taken care of in helper)
-        updateOrder( orderInfo )
+        #update the order in db (only need to give the OrderItem list)
+        updateOrder( orderInfo["OrderId"],  orderInfo["OrderItems"] )
     else:
         #generate OrderId 
         orderId = "-".join( [ orderInfo[x] for x in ["RestaurantId", "TableId", "Time"] ] )
@@ -36,9 +35,10 @@ def post_order():
         #add the order to db
         addOrder(orderInfo)
     #always return the OrderId
-    return orderId 
+    return orderInfo["OrderId"] 
 
 #remove order from Order table and into History table
+#and return receipt
 @app.route("/close/<id>")
 def close_order(id):
     return closeOrder(id)
