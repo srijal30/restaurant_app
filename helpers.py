@@ -114,21 +114,8 @@ def removeOrder( orderId ):
     }
     order.delete_item( Key=key )
 
-
-
-#FOR THE HISTORY TABLE
-#add an item to the history table
-def addHistory( order ):
-    history.put_item(
-        Item=order
-    )
-
-
-
-#USE BOTH HISTORY AND ORDER TABLES
-#also ADD RECEIPT GENERATION
-#complete an order
-def closeOrder( orderId ):
+#returns how the receipt would look like at the current state of the order
+def getReceipt( orderId ):
     #make the base for the receipt the order 
     receipt = retreiveOrder( orderId )    
 
@@ -161,10 +148,26 @@ def closeOrder( orderId ):
     #add the price + tax rate into total
     receipt["Total"] = str( round(total, 2) )
     receipt["TaxRate"] = str( tax_rate )
+    return receipt
 
+
+#FOR THE HISTORY TABLE
+#add an item to the history table
+def addHistory( order ):
+    history.put_item(
+        Item=order
+    )
+
+
+
+#USE BOTH HISTORY AND ORDER TABLES
+#also ADD RECEIPT GENERATION
+#complete an order
+def closeOrder( orderId ):
+    receipt = getReceipt( orderId )     
     #update the dbs
-    removeOrder( orderId )    
     addHistory( receipt )
+    removeOrder( orderId )    
     #return the receipt
     return receipt
 

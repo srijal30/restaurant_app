@@ -43,6 +43,10 @@ def post_order():
 def close_order(id):
     return closeOrder(id)
 
+#returns the current state of the reciept of an open order
+@app.route("/receipt/<id>")
+def get_current_receipt(id):
+    return getReceipt(id)
 
 #FOR TESTING PURPOSES:
 

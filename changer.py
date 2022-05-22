@@ -2,7 +2,6 @@ import json
 import uuid
 from helpers import *
 
-
 #TO DO:
 #in the future have a better system to create uuid for menuitems
 def item_id_gen( json ):
@@ -27,7 +26,6 @@ content = json.load(open("jsons/"+filename))
 
 #maybe instead of having 2 choices, it can just check if there alr exists 
 #a restaurant id... dont matter tho as this is a temporary means
-
 
 #ADDING MENU
 if choice == '0':
