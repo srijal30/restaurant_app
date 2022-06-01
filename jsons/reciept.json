@@ -1,0 +1,26 @@
+{
+    "OrderId": "... will store the restaurantId and Table and 'time' although what time we are stil unsure" ,
+    "OrderItems": [
+
+        { 
+            "ItemId": "...",
+            "Quantity": "...",
+            "Price": "..."
+        },
+
+        {
+            "ItemId": "...",
+            "Quantity": "...",
+            "Price": "..."
+        }
+
+    ],
+
+
+    "PriceInfo": {
+        "Gratiutiy"
+    }
+
+
+
+}

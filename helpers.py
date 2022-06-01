@@ -13,7 +13,6 @@ menu = dynamo.Table('Menu')
 order = dynamo.Table('Order') #for open orders
 history = dynamo.Table('History') #for receipts (old order)
 
-
 #FOR THE MENU
 #add json to database
 def addMenu(item):
