@@ -1,53 +1,59 @@
 {
-    "RestaurantName": "Bossman Halal Cart",
     "Categories": [
-        {
-            "CategoryName": "Meals",
-            "CategoryIcon": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
-            "MenuItems": [
-                {
-                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-8c4fd750-f4d8-481b-96df-c8eff1fbd5e7",
-                    "Name": "Chicken Over Rice",
-                    "Price": "8.99",
-                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
-                    "Description": "Chicken served over rice with traditional white sauce."
-                },
-                {
-                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-010a2961-c724-4421-8b5b-5d6b6fa69ca7",
-                    "Name": "Lamb Over Rice",
-                    "Price": "8.99",
-                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
-                    "Description": "Exactly like chicken over rice except served with lamb"
-                },
-                {
-                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-4fa57122-2f9e-4d6d-ab8a-d57ee8b3d7d0",
-                    "Name": "Chicken Gyro",
-                    "Price": "6.99",
-                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
-                    "Description": "Chicken over rice except no rice and served insIde wrap. White sauce still included."
-                }
-            ]
-        },
-        {
-            "CategoryName": "Sides",
-            "CategoryIcon": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
-            "MenuItems": [
-                {
-                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-b6557855-d64b-4af3-9951-45792e5ae5a1",
-                    "Name": "Falafel",
-                    "Price": "4.0",
-                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
-                    "Description": "Traditional MIddle Eastern dish."
-                },
-                {
-                    "Id": "72813601-662e-4dbf-b40c-342bea799a14-482b86cb-97e6-488a-a001-553dd5112bd5",
-                    "Name": "Hot Dog",
-                    "Price": "2.0",
-                    "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
-                    "Description": "Meat that comes from who knows where served on a bun with some ketchup."
-                }
-            ]
-        }
+      {
+        "CategoryIcon": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+        "CategoryName": "Meals",
+        "MenuItems": [
+          {
+            "Description": "Chicken served over rice with traditional white sauce.",
+            "Id": "91b8627e-3100-4925-87b2-962bc0281669-1608d9f7-3e58-4a90-81dd-061e055e8208",
+            "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "Name": "Chicken Over Rice",
+            "Price": "8.99"
+          },
+          {
+            "Description": "Exactly like chicken over rice except served with lamb",
+            "Id": "91b8627e-3100-4925-87b2-962bc0281669-e4cf9db0-f3be-4d44-a219-c2b37a7087d8",
+            "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "Name": "Lamb Over Rice",
+            "Price": "8.99"
+          },
+          {
+            "Description": "Chicken over rice except no rice and served insIde wrap. White sauce still included.",
+            "Id": "91b8627e-3100-4925-87b2-962bc0281669-6c491c25-7310-4af7-bb17-3e9033fe9a21",
+            "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "Name": "Chicken Gyro",
+            "Price": "6.99"
+          }
+        ]
+      },
+      {
+        "CategoryIcon": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+        "CategoryName": "Sides",
+        "MenuItems": [
+          {
+            "Description": "Traditional MIddle Eastern dish.",
+            "Id": "91b8627e-3100-4925-87b2-962bc0281669-0a29c71a-536d-481b-ab12-95e8815b8832",
+            "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "Name": "Falafel",
+            "Price": "4.0"
+          },
+          {
+            "Description": "Meat that comes from who knows where served on a bun with some ketchup.",
+            "Id": "91b8627e-3100-4925-87b2-962bc0281669-b9c003c2-8d8c-454e-9b14-fc42b254cb65",
+            "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "Name": "Hot Dog",
+            "Price": "2.0"
+          },
+          {
+            "Description": "Grilled chicken on a stick",
+            "Img": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640",
+            "Name": "Chicken Kebab",
+            "Price": "4.50"
+          }
+        ]
+      }
     ],
-    "RestaurantId": "dbd236b8-76c6-4f02-bfae-2828b683b20e"
-}
+    "RestaurantId": "91b8627e-3100-4925-87b2-962bc0281669",
+    "RestaurantName": "Bossman Halal Cart"
+  }

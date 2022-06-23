@@ -5,6 +5,7 @@
 from flask import Flask, request, render_template
 #helpful imports
 from helpers import *
+from changer import *
 import time 
 import json
 #app setup
@@ -21,7 +22,6 @@ def get_menu(id):
 #rn generates a new order everytime, in the future we should check if preexist order
 @app.route("/order", methods=["POST"])
 def post_order():
-    print( request.data )
     orderInfo = json.loads(request.data)
     #check if there is pre-exisiting order id
     if "OrderId" in orderInfo and orderInfo["OrderId"] != "":
@@ -29,7 +29,7 @@ def post_order():
         updateOrder( orderInfo["OrderId"],  orderInfo["OrderItems"] )
     else:
         #generate OrderId 
-        orderId = "-".join( [ orderInfo[x] for x in ["RestaurantId", "TableId", "Time"] ] )
+        orderId = ":".join( [ orderInfo[x] for x in ["RestaurantId", "TableId", "Time"] ] )
         #add it to orderInfo
         orderInfo["OrderId"] = orderId
         #add the order to db
@@ -68,8 +68,18 @@ def close_order(id):
 def get_current_receipt(id):
     return getReceipt(id)
 
-
-
+#add a menu to the menu database (will replace the old one if there was one)
+@app.route("/add/menu", methods=['POST'])
+def add_new_menu():
+    from changer import gen_rest_id
+    menu_json = json.loads( request.data )
+    #check to see if there is a restaurant id (else import one)
+    if "RestaurantId" not in menu_json or menu_json["RestaurantId"] =="":
+        menu_json["RestaurantId"] = gen_rest_id( menu_json["RestaurantName"] )
+    #check all the menu items and add an item id if necassary
+    item_id_gen( menu_json )
+    addMenu( menu_json )
+    return menu_json["RestaurantId"]
 
 #FOR TESTING PURPOSES:
 #temp kitchen endpoint

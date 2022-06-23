@@ -22,18 +22,6 @@ def removeMenu(key):
             'RestaurantId': key
         }
     )
-#update menu item on database
-def updateMenu(key, newMenu):
-    #update the item
-    menu.update_item(
-        Key={
-            'RestaurantId': key
-        },
-        UpdateExpression='SET Categories = :val1',
-        ExpressionAttributeValues={
-            ':val1': newMenu
-        }
-    )
 #retreive from database
 def retreiveMenu(key):
     return menu.get_item(

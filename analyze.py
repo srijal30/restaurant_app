@@ -1,3 +1,6 @@
+#RIGHT NOW THIS FILE DOESNT WORK CUZ I CHANGED THE CONNECTION 
+# FOR AN ORDER ID FROM - to :
+
 from helpers import history
 
 #get all the info fro the history table and put in data
@@ -12,8 +15,7 @@ restaurants = {}
 
 for order in data:
     #there is an issue with the split
-    splitted = order["OrderId"].split("-")
-    rest_id = "-".join( splitted[0:5] )
+    rest_id = ":".join( splitted[0:5] )
 
     #if we havent seen this restaurant before
     if rest_id not in restaurants:
