@@ -7,6 +7,7 @@ from flask import Flask, request, render_template
 #helpful imports
 from helpers import *
 import time 
+import json
 
 #app setup
 app = Flask( __name__ )
@@ -22,9 +23,10 @@ def get_menu(id):
 #rn generates a new order everytime, in the future we should check if preexist order
 @app.route("/order", methods=["POST"])
 def post_order():
+    print( request.data )
     orderInfo = json.loads(request.data)
     #check if there is pre-exisiting order id
-    if "OrderId" in orderInfo:
+    if "OrderId" in orderInfo and orderInfo["OrderId"] != "":
         #update the order in db (only need to give the OrderItem list)
         updateOrder( orderInfo["OrderId"],  orderInfo["OrderItems"] )
     else:

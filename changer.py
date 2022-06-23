@@ -15,7 +15,7 @@ def item_id_gen( json ):
 
 #user input
 print("\nWhat would you like to do?\n\t0: Add Menu\n\t1: Change Menu")
-choice = input("\nYour Choice: ")
+ choice = input("\nYour Choice: ")
 print()
 
 #get the filename
@@ -41,7 +41,6 @@ if choice == '0':
     item_id_gen(content)
     #load the new file content back
     open("jsons/"+filename, "w").write( json.dumps(content) )
-    
     #add the menu to database
     addMenu(content)
 

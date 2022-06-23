@@ -61,7 +61,8 @@ def updateOrder( orderId, orderItems ):
         name = item["ItemId"] 
         amount = item["Quantity"]
         if name in name_index:
-            items[ name_index[name] ]["Quantity"] += amount
+            old_amount = items[ name_index[name]["Quantity"] ]
+            items[ name_index[name] ]["Quantity"] = str( old_amount + int(amount) )
         else:
             items += [item]
     #update the order
