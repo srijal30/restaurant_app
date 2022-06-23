@@ -3,12 +3,10 @@
 
 #flask import
 from flask import Flask, request, render_template
-
 #helpful imports
 from helpers import *
 import time 
 import json
-
 #app setup
 app = Flask( __name__ )
 app.secret_key = "what is a good secret" #maybe change in the future
@@ -39,6 +37,26 @@ def post_order():
     #always return the OrderId
     return orderInfo["OrderId"] 
 
+#get all orders for a restaurant
+@app.route("/kitchen/<id>")
+def get_open_orders( id ):    
+    menu = retreiveMenu(id)
+    orders = [ x for x in getOrders() if x["RestaurantId"] == id ]
+    for order in orders:
+        #loop through all items and add their name
+        for item in order["OrderItems"]:
+            current_item = item_by_id( item["ItemId"], menu )
+            item["Name"] = current_item["Name"]
+            item["Description"] = current_item["Description"]
+    return {"Orders":orders}
+#might be slow... but temp fix to find the item by id
+def item_by_id( id, menu ):
+    for category in menu["Categories"]:
+        for item in category["MenuItems"]:
+            if item["Id"] == id:
+                return item
+    return None
+
 #remove order from Order table and into History table
 #and return receipt
 @app.route("/close/<id>")
@@ -50,10 +68,12 @@ def close_order(id):
 def get_current_receipt(id):
     return getReceipt(id)
 
-#FOR TESTING PURPOSES:
 
+
+
+#FOR TESTING PURPOSES:
 #temp kitchen endpoint
-@app.route("/kitchen")
+@app.route("/mockkitchen")
 def see_kitchen():
     return render_template( "kitchen.html", orders=getOrders() )
 

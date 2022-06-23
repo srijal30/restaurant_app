@@ -15,7 +15,7 @@ def item_id_gen( json ):
 
 #user input
 print("\nWhat would you like to do?\n\t0: Add Menu\n\t1: Change Menu")
- choice = input("\nYour Choice: ")
+choice = input("\nYour Choice: ")
 print()
 
 #get the filename
@@ -36,7 +36,6 @@ if choice == '0':
     content["RestaurantId"] = id
     #create a map for item 
     open("map.txt", "a").write( name + " | " + id + "\n" )
-    
     #add menu item ids
     item_id_gen(content)
     #load the new file content back
@@ -47,12 +46,10 @@ if choice == '0':
 #UPDATE MENU
 elif choice == '1':
     id = content["RestaurantId"]
-    
     #add menu item id for all categories (if not)
     item_id_gen(content)
     #load the new file content back
     open("jsons/"+filename, "w").write( json.dumps(content) )
-    
     #only update categories
     newMenu = content["Categories"]
     updateMenu(id, newMenu)

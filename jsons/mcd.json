@@ -8,15 +8,15 @@
                 {
                     "Id": "b1637b3a-5c12-43e6-a90c-df8fce1587cc-a875a5d7-d610-4132-b20f-d07a57cf7f0e",
                     "Name": "Quarter Pounder",
-                    "Price": "69.00",
-                    "Img": "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpgZ",
+                    "Price": "5.00",
+                    "Img": "https://helios-i.mashable.com/imagery/articles/00apgKgIAO4EnFfjOgCApRe/hero-image.fill.size_1248x702.v1619086604.jpg",
                     "Description": "Weighs a quarter of a pound. Beef, Bread, Lettuce."
                 },
                 {
                     "Id": "b1637b3a-5c12-43e6-a90c-df8fce1587cc-22a7975a-955b-4a39-9154-f1ae88ba8687",
                     "Name": "McChicken",
-                    "Price": "0.03",
-                    "Img": "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg",
+                    "Price": "0.75",
+                    "Img": "https://helios-i.mashable.com/imagery/articles/00apgKgIAO4EnFfjOgCApRe/hero-image.fill.size_1248x702.v1619086604.jpg",
                     "Description": "Really cheap chicken sandwich. Served with mayo."
                 }
             ]
@@ -49,7 +49,7 @@
                     "Id": "b1637b3a-5c12-43e6-a90c-df8fce1587cc-0e34e48b-a70b-41f9-b5f7-afb5bf4b7ac8",
                     "Name": "Bottled Water",
                     "Price": "2.0",
-                    "Img": "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg",
+                    "Img": "https://helios-i.mashable.com/imagery/articles/00apgKgIAO4EnFfjOgCApRe/hero-image.fill.size_1248x702.v1619086604.jpg",
                     "Description": "Healthiest thing on the menu, too bad its bad for the enviorment."
                 },
                 {
@@ -63,7 +63,7 @@
                     "Id": "b1637b3a-5c12-43e6-a90c-df8fce1587cc-9d914df5-b04e-4b85-a1bf-a96021b9cd39",
                     "Name": "Milk",
                     "Price": "1.5",
-                    "Img": "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg",
+                    "Img": "https://helios-i.mashable.com/imagery/articles/00apgKgIAO4EnFfjOgCApRe/hero-image.fill.size_1248x702.v1619086604.jpg",
                     "Description": "Helps you gain muscle."
                 }
             ]
